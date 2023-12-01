@@ -30,6 +30,6 @@ provision:
     set -eux -o pipefail
     export DEBIAN_FRONTEND=noninteractive
     apt-get update
-    apt-get -y install bc bison build-essential ccache clang clangd cpio dwarves flex gdb-multiarch git jsonnet kmod libelf-dev libguestfs-tools libncurses5-dev libssl-dev libssl-dev lld llvm python3-pip trace-cmd qemu-system-x86 qemu-system-arm qemu-efi-aarch64 qemu-user-static
+    apt-get -y install bindfs mmdebstrap bc bison build-essential ccache clang clangd cpio dwarves flex gdb-multiarch git jsonnet kmod libelf-dev libguestfs-tools libncurses5-dev libssl-dev libssl-dev lld llvm python3-pip trace-cmd qemu-system-x86 qemu-system-arm qemu-efi-aarch64 qemu-user-static
     bash -c 'echo "fs.inotify.max_user_watches=524288" >> /etc/sysctl.conf'
     sysctl -p
